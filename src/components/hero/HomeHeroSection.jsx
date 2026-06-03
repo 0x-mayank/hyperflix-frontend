@@ -26,7 +26,7 @@ export default function HomeHeroSection({ item, type = "movie" }) {
         />
 
         <div
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-80"
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(220,38,38,0.15) 1px, transparent 1px),
@@ -52,7 +52,7 @@ export default function HomeHeroSection({ item, type = "movie" }) {
         />
       </div>
 
-      <div className="relative z-10 w-full mx-auto px-12 md:px-24 flex flex-col items-center text-center" style={{ maxWidth: '1100px' }}>
+      <div className="relative z-10 w-full mb-4 mx-auto px-12 md:px-24 flex flex-col items-center text-center" style={{ maxWidth: '1100px' }}>
         
         <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 mb-8 shadow-[0_0_20px_rgba(239,68,68,0.1)]">
           <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse shadow-[0_0_8px_#dc2626]" />
@@ -73,26 +73,28 @@ export default function HomeHeroSection({ item, type = "movie" }) {
 
         <form 
           onSubmit={handleHeroSearch}
-          className="w-full max-w-175 flex items-center bg-white/3 border border-white/10 rounded-2xl h-16 pl-6 pr-2 
-                     shadow-[0_20px_50px_rgba(0,0,0,0.6),0_0_40px_rgba(200,30,58,0.1)] 
-                     focus-within:border-red-600/40 focus-within:bg-white/[0.07] transition-all duration-500 mb-12"
+          className="w-full max-w-175 flex items-center 
+               bg-white/5 backdrop-blur-md backdrop-saturate-150 
+               border border-white/10 rounded-2xl h-16 pl-6 pr-2 
+               shadow-[0_20px_50px_rgba(0,0,0,0.6),0_0_40px_rgba(200,30,58,0.1)] 
+               focus-within:border-red-600/50 focus-within:bg-white/10 transition-all duration-500 mb-12"
         >
-          <FaSearch className="text-white/20 text-xl mr-4 shrink-0" />
-          <input
+        <FaSearch className="text-white/40 text-xl mr-4 shrink-0" />
+        <input
             type="text"
             value={heroQuery}
             onChange={(e) => setHeroQuery(e.target.value)}
             placeholder="Movie? Tv Show? Anime?"
-            className="bg-transparent outline-none text-white w-full text-lg placeholder:text-white/10 font-medium"
+            className="bg-transparent outline-none text-white w-full text-lg placeholder:text-white/30 font-medium"
           />
-          <button
+       <button
             type="submit"
             className="bg-red-600 hover:bg-red-700 text-white font-black text-sm uppercase tracking-widest px-8 h-12 rounded-xl 
-                       transition-all shadow-[0_0_20px_rgba(239,68,68,0.3)] shrink-0"
-          >
-            Search
-          </button>
-        </form>
+                 transition-all shadow-[0_0_20px_rgba(239,68,68,0.3)] shrink-0"
+        >
+          Search
+       </button>
+      </form>
 
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 pt-8 border-t border-white/5 w-full">
           <span className="flex items-center gap-2 text-white/30 text-[10px] font-black uppercase tracking-[0.2em]"><FaBan className="text-red-600/50" /> No Ads</span>
