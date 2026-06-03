@@ -11,3 +11,6 @@ export const getTopRatedAnime = () =>
 
 export const getAnimeDetails = (id) =>
   api.get(`/anime/${id}`);
+
+export const getAnimeSeasons = (id) =>
+  api.get(`/anime/${id}/seasons`);
