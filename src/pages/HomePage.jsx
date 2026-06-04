@@ -54,8 +54,7 @@ export default function HomePage() {
       </div>
 
       <main className="relative z-10">
-        <HomeHeroSection item={homeData.trendingMovies?.[0]} type="movie" />
-
+        <HomeHeroSection posters={homeData.trendingMovies?.slice(0, 9)} />
         <div 
           className="w-full mx-auto space-y-16 pb-24 relative z-20 px-12 md:px-24"
           style={{ maxWidth: '1440px' }}
