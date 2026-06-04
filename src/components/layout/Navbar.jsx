@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#060608]/95 via-[#060608]/60 to-transparent backdrop-blur-md">
       <div 
-        className="w-full mx-auto px-12 md:px-24 h-20 flex items-center justify-between relative"
+        className="w-full mx-auto px-12 md:px-24 h-15 flex items-center justify-between relative"
         style={{ maxWidth: '1440px' }}
       >
         <div className={`flex items-center gap-20 transition-all duration-500 ${isSearchActive ? 'opacity-0 -translate-x-10 pointer-events-none' : 'opacity-100 translate-x-0'}`}>
@@ -76,7 +76,7 @@ export default function Navbar() {
             onClick={() => !isSearchActive && setIsSearchActive(true)}
             className={`relative w-full flex items-center h-12 bg-white/5 border border-white/10 rounded-full shadow-2xl transition-all duration-300 ${isSearchActive ? 'px-5 cursor-text justify-start' : 'cursor-pointer justify-center hover:bg-white/10'}`}
           >
-            <FaSearch 
+            <FaSearch size={14}
               className={`text-white/80 shrink-0 transition-all duration-200 ${
                 isSearchActive ? 'text-white/40 mr-4 text-base' : 'text-lg'
               }`} 
