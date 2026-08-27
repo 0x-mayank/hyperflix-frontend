@@ -6,5 +6,5 @@ export const getMovieStream = (id) =>
 export const getTvStream = (id, season, episode) =>
   api.get(`/stream/tv/${id}/${season}/${episode}`);
 
-export const getAnimeStream = (id, season, episode) =>
-  api.get(`/anime/${id}/stream`, { params: { season, episode } });
+export const getAnimeStream = (imdbId, season, episode) =>
+  api.get(`/stream/tv/${imdbId}/${season}/${episode}`);

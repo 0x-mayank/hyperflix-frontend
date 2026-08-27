@@ -9,10 +9,9 @@ export const getPopularTv = () =>
 export const getTvDetails = (id) =>
   api.get(`/tv/${id}`);
 
-export const getSeasonDetails = (
-  id,
-  season
-) =>
-  api.get(
-    `/tv/${id}/season/${season}`
-  );
+export const getSeasonDetails = (id, season) =>
+  api.get(`/tv/${id}/season/${season}`);
+
+// Anime details with corrected IMDb/OMDb season structure
+export const getAnimeDetails = (id) =>
+  api.get(`/anime/${id}`);
